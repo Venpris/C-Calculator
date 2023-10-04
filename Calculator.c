@@ -9,12 +9,15 @@ int main() {
         printf("Enter calculation:\n");
         int scan_result = scanf("%f %c %f", &value_one, &operator, &value_two);
 
-        while ((ch = getchar()) != '\n' && ch != EOF); // Clear input buffer
-
         if (scan_result == EOF) {
-            printf("Goodbye!");
+            printf("Goodbye!\n");
             break;
-        } else if (scan_result != 3) {
+        }
+
+        int ch;
+        while ((ch = getchar()) != '\n' && ch != EOF); // Clear the buffer
+
+        if (scan_result != 3) {
             printf("Input must have 3 arguments.\n\n");
             continue;
         }
