@@ -9,7 +9,7 @@ int main() {
         printf("Enter calculation:\n");
         int scan_result = scanf("%f %c %f", &value_one, &operator, &value_two);
 
-        if (scan_result == EOF) {
+        if (feof(stdin)) {
             printf("Goodbye!\n");
             break;
         }
